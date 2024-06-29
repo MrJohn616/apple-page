@@ -1,0 +1,58 @@
+@use "cvwtheme";
+
+.section--vw {
+  display: grid;
+  row-gap: 0.7em;
+  grid-template-columns: repeat(1, 1fr);
+  width: 100%;
+}
+.cardvw__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 43.125rem;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-top: 3.4375rem;
+  cursor: pointer;
+}
+.cardvw--tittle {
+  font-weight: bold;
+  font-size: 3.4em;
+  margin: 0em 0 0 0;
+}
+.cardvw--p {
+  font-size: 1.78em;
+  margin: 0 0 0.57em 0;
+}
+.cardvw__wrapper--btn {
+  display: flex;
+}
+.cardvw--btn {
+  height: 2.3em;
+  margin: 0 0.5em;
+  padding: 0 1.1em;
+  border-radius: 2em;
+  font-size: 1.15em;
+  cursor: pointer;
+}
+
+// Variación cvw2
+.cvw2 {
+  padding-top: 20px;
+}
+.cvw2 p:first-of-type {
+  margin-bottom: 0.1em;
+}
+.cvw2 p:last-of-type {
+  font-size: 1.3em;
+  margin: 0 0 0.8em 0;
+}
+
+@media screen and (max-width: 1366px) {
+  .cardvw__wrapper {
+    height: 36.25rem;
+  }
+}

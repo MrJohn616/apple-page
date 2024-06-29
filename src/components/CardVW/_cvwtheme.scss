@@ -1,0 +1,28 @@
+:root {
+  --color-button-iphone15pro: #0077ed;
+  --color-button-iphone15pro-hover: #0077ed;
+}
+
+.black {
+  color: var(--negro);
+}
+.white {
+  color: var(--blanco);
+}
+.section--vw {
+  background-color: var(--blanco);
+}
+.cardvw--btn:first-child {
+  background-color: var(--color-button-iphone15pro);
+  color: var(--blanco);
+}
+.cardvw--btn:last-child {
+  color: var(--color-button-iphone15pro);
+}
+.cardvw--btn {
+  border: 1px solid var(--color-button-iphone15pro);
+}
+.cardvw--btn:last-child:hover {
+  background-color: var(--color-button-iphone15pro-hover);
+  color: var(--blanco);
+}

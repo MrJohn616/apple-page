@@ -1,0 +1,32 @@
+@use "nbtheme";
+
+:root {
+  --navbar-h: 2.75rem;
+}
+
+body {
+  margin-top: var(--navbar-h);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  height: var(--navbar-h);
+}
+.navbar__ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 0 22px;
+  width: 1048px;
+}
+.navbar__li {
+  padding: 0 8px;
+  cursor: pointer;
+}
