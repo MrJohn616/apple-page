@@ -182,7 +182,7 @@ function App() {
     {
       tittle: "iPhone 15 Pro",
       p: "Titanio. Tan resistente y ligero. Tan Pro.",
-      src: "/img/cvw/iphone15pro.jpg",
+      src: "img/cvw/iphone15pro.jpg",
       className: "white",
     },
     {
