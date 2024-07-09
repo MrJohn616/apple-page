@@ -1,34 +1,68 @@
 .section--carousel {
-  height: 65vh;
+  position: relative;
+  height: 600px;
 }
 .carousel__wrapper {
+  position: relative;
   height: 100%;
 }
 .carousel__item {
   position: absolute;
-  width: 70%;
-  height: 65vh;
+  width: 80%;
+  height: 100%;
   transition: transform 1s ease;
 
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
 .toLeft {
-  transform: translateX(-79.5%);
+  transform: translateX(-89.5%);
   cursor: pointer;
 }
 .toRight {
-  transform: translateX(122.5%);
+  transform: translateX(114.5%);
   cursor: pointer;
 }
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1360px) {
   .section--carousel {
-    height: 32.25rem;
+    height: 550px;
   }
-  .carousel__item {
-    height: 32.25rem;
+}
+@media screen and (max-width: 1070px) {
+  .section--carousel {
+    height: 500px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .section--carousel {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .section--carousel {
+    height: 340px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .section--carousel {
+    height: 250px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .section--carousel {
+    height: 200px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .section--carousel {
+    height: 180px;
+  }
+}
+@media screen and (max-width: 280px) {
+  .section--carousel {
+    height: 130px;
   }
 }

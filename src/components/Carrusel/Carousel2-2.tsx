@@ -10,16 +10,16 @@ function Carousel({ itemsData }: { itemsData: CarouselItem[] }) {
   const [isAnimating, setIsAnimating] = useState(false);
 
   const defaultInitialPositions: Record<number, number> = {
-    0: -180.5,
-    1: -79.5,
-    2: 21.5,
-    3: 122.5,
-    4: 223.5,
-    5: 324.5,
-    6: 425.5,
-    7: 526.5,
-    8: 627.5,
-    9: 728.5,
+    0: -191.5,
+    1: -89.5,
+    2: 12.5,
+    3: 114.5,
+    4: 216.5,
+    5: 318.5,
+    6: 420.5,
+    7: 522.5,
+    8: 624.5,
+    9: 726.5,
   };
   const initialPositions: Record<number, number> = itemsData.reduce(
     (acc, item) => {
@@ -40,7 +40,7 @@ function Carousel({ itemsData }: { itemsData: CarouselItem[] }) {
       setItemPositions((prevPositions) => {
         const newPositions = { ...prevPositions };
         for (let i = 0; i < itemsData.length; i++) {
-          newPositions[items[i].id] = itemPositions[items[i].id] + 101;
+          newPositions[items[i].id] = itemPositions[items[i].id] + 102;
         }
         return newPositions;
       });
@@ -57,8 +57,8 @@ function Carousel({ itemsData }: { itemsData: CarouselItem[] }) {
         // Reposición, primer y ultimo elemento
         setItemPositions((prevPositions) => {
           const newPositions = { ...prevPositions };
-          newPositions[items[items.length - 1].id] = -180.5;
-          newPositions[items[items.length - 2].id] = 728.5;
+          newPositions[items[items.length - 1].id] = -191.5;
+          newPositions[items[items.length - 2].id] = 726.5;
           return newPositions;
         });
 
@@ -76,7 +76,7 @@ function Carousel({ itemsData }: { itemsData: CarouselItem[] }) {
       setItemPositions((prevPositions) => {
         const newPositions = { ...prevPositions };
         for (let i = 0; i < items.length; i++) {
-          newPositions[items[i].id] = itemPositions[items[i].id] - 101;
+          newPositions[items[i].id] = itemPositions[items[i].id] - 102;
         }
         return newPositions;
       });
@@ -93,8 +93,8 @@ function Carousel({ itemsData }: { itemsData: CarouselItem[] }) {
         // Reposición, primer y ultimo elemento
         setItemPositions((prevPositions) => {
           const newPositions = { ...prevPositions };
-          newPositions[items[1].id] = -180.5;
-          newPositions[items[0].id] = 728.5;
+          newPositions[items[1].id] = -191.5;
+          newPositions[items[0].id] = 726.5;
           return newPositions;
         });
 

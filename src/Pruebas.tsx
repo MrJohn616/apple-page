@@ -1,11 +1,9 @@
-import NavBar from "./components/NavBar";
-import CardVW from "./components/CardVW";
-import CardVW2 from "./components/CardVW2";
-import CardS from "./components/CardS";
+import { Link } from "react-router-dom";
 import Carousel from "./components/Carrusel/Carousel2-2";
-import Footer from "./components/Footer";
+import NavBar from "./components/NavBar";
+import "./components/NavBar/_navbar.scss";
 
-function App() {
+export default function App() {
   const navItem = [
     {
       svg: (
@@ -32,7 +30,6 @@ function App() {
         </svg>
       ),
       className: "store",
-      desplegable: true,
     },
     {
       svg: (
@@ -46,7 +43,6 @@ function App() {
         </svg>
       ),
       className: "mac",
-      desplegable: true,
     },
     {
       svg: (
@@ -60,7 +56,6 @@ function App() {
         </svg>
       ),
       className: "ipad",
-      desplegable: true,
     },
     {
       svg: (
@@ -74,7 +69,6 @@ function App() {
         </svg>
       ),
       className: "iphone",
-      desplegable: true,
     },
     {
       svg: (
@@ -88,7 +82,6 @@ function App() {
         </svg>
       ),
       className: "watch",
-      desplegable: true,
     },
     {
       svg: (
@@ -102,7 +95,6 @@ function App() {
         </svg>
       ),
       className: "airpods",
-      desplegable: true,
     },
     {
       svg: (
@@ -116,7 +108,6 @@ function App() {
         </svg>
       ),
       className: "tv&casa",
-      desplegable: true,
     },
     {
       svg: (
@@ -130,7 +121,6 @@ function App() {
         </svg>
       ),
       className: "entertaiment",
-      desplegable: true,
     },
     {
       svg: (
@@ -144,7 +134,6 @@ function App() {
         </svg>
       ),
       className: "accessories",
-      desplegable: true,
     },
     {
       svg: (
@@ -158,7 +147,6 @@ function App() {
         </svg>
       ),
       className: "support",
-      desplegable: true,
     },
     {
       svg: (
@@ -185,357 +173,6 @@ function App() {
         </svg>
       ),
       className: "bag",
-    },
-  ];
-  const underItems = [
-    {
-      spanItems: {
-        span1: "Comprar",
-        span2: "Enlaces rápidos",
-        span3: "Comprar en las tiendas especiales",
-      },
-      linkItems1: [
-        "Ver lo último",
-        "Mac",
-        "iPad",
-        "iPhone",
-        "Apple Watch",
-        "Accesorios",
-      ],
-      linkItems2: [
-        "Buscar una tienda",
-        "Encuentra tu pedido",
-        "Apple trade In",
-        "Financiamiento",
-        "Oferta para estudiantes Universitarios",
-      ],
-      linkItems3: ["Educación", "Empresas"],
-    },
-  ];
-  const underItems2 = [
-    {
-      spanItems: {
-        span1: "Conoce la Mac",
-        span2: "Comprar la Mac",
-        span3: "Más para la Mac",
-      },
-      linkItems1: [
-        "Ver todos los modelos de Mac",
-        "MacBook Air",
-        "MacBook Pro",
-        "iMac",
-        "Mac mini",
-        "Mac Studio",
-        "Mac Pro",
-        "Monitores",
-      ],
-      linkItems2: [
-        "Comprar la Mac",
-        "Accesorios para la Mac",
-        "Apple Trade In",
-        "Financiamiento",
-        "Oferta para estudiantes universitarios",
-      ],
-      linkItems3: [
-        "Soporte para la Mac",
-        "AppleCare+ para la Mac",
-        "Avance de macOS Sequoia",
-        "Apple Intelligence",
-        "Apps de Apple",
-        "Continuidad",
-        "iCloud+",
-        "Mac para la empresa",
-        "Educación",
-      ],
-    },
-  ];
-  const underItems3 = [
-    {
-      spanItems: {
-        span1: "Conoce el iPad",
-        span2: "Comprar el iPad",
-        span3: "Más para el iPad",
-      },
-      linkItems1: [
-        "Ver todos los modelos de iPad",
-        "iPad Pro",
-        "iPad Air",
-        "iPad",
-        "iPad mini",
-        "Apple pencil",
-        "Teclados",
-      ],
-      linkItems2: [
-        "Comprar el iPad",
-        "Accesorios para el iPad",
-        "Apple Trade In",
-        "Financiamiento",
-        "Oferta para estudiantes universitarios",
-      ],
-      linkItems3: [
-        "Soporte para el iPad",
-        "AppleCare+ para iPad",
-        "Avance de iPadOS 18",
-        "Apple Intelligence",
-        "Apps de Apple",
-        "iCloud+",
-        "Educación",
-      ],
-    },
-  ];
-  const underItems4 = [
-    {
-      spanItems: {
-        span1: "Conoce el iPhone",
-        span2: "Comprar el iPhone",
-        span3: "Más del iPhone",
-      },
-      linkItems1: [
-        "Ver todos los modelos de iPhone",
-        "iPhone 15 Pro",
-        "iPhone 15",
-        "iPhone 14",
-        "iPhone 13",
-        "iPhone SE",
-      ],
-      linkItems2: [
-        "Comprar el iPhone",
-        "Accesorios para el iPhone",
-        "Apple trade In",
-        "Financiamiento",
-      ],
-      linkItems3: [
-        "Soporte para el iPhone",
-        "AppleCare+ para iPhone",
-        "Avance de iOS 18",
-        "Apple Intelligence",
-        "Apps de Apple",
-        "Privacidad en el iPhone",
-        "iCloud+",
-        "Wallet, Apple Pay",
-        "Siri",
-      ],
-    },
-  ];
-  const underItems5 = [
-    {
-      spanItems: {
-        span1: "Conoce el Apple Watch",
-        span2: "Comprar el Apple Watch",
-        span3: "Más para el Apple Watch",
-      },
-      linkItems1: [
-        "Ver todos los modelos de Apple Watch",
-        "Apple Watch Series 9",
-        "Apple Watch Ultra 2",
-        "Apple Watch SE",
-        "Apple Watch Nike",
-        "Apple Watch Hermès",
-      ],
-      linkItems2: [
-        "Comprar el Apple Watch",
-        "Apple Watch Studio",
-        "Correos para el Apple Watch",
-        "Accesorios para el Apple Watch",
-        "Apple trade In",
-        "Financiamiento",
-      ],
-      linkItems3: [
-        "Soporte para el Apple Watch",
-        "AppleCare+",
-        "Avance de watchOS 11",
-        "Apps de Apple",
-        "Apple Fitness+",
-      ],
-    },
-  ];
-  const underItems6 = [
-    {
-      spanItems: {
-        span1: "Conoce los AirPods",
-        span2: "Comprar los AirPods",
-        span3: "Más para los AirPods",
-      },
-      linkItems1: [
-        "Ver todos los modelos de AirPods",
-        "AirPods Pro (Segunda generación)",
-        "AirPods (Segunda generación)",
-        "AirPods (Tercera generación)",
-        "AirPods MAX",
-      ],
-      linkItems2: ["Comprar los AirPods", "Accesorios para los AirPods"],
-      linkItems3: [
-        "Soporte para los AirPods",
-        "AppleCare+ para audífonos",
-        "Apple Music",
-      ],
-    },
-  ];
-  const underItems7 = [
-    {
-      spanItems: {
-        span1: "Conoce los dispositivos para la TV y la casa",
-        span2: "Comprar dispositivos para la TV y la casa",
-        span3: "Más para la TV y la casa",
-      },
-      linkItems1: [
-        "Ver todos los dispositivos para la TV y la casa",
-        "Apple TV 4K",
-        "HomePod",
-        "HomePod mini",
-      ],
-      linkItems2: [
-        "Comprar el Apple TV 4K",
-        "Comprar el HomePod",
-        "Comprar el HomePod mini",
-        "Comprar el Siri Remote",
-        "Accesorios para la TV y la casa",
-      ],
-      linkItems3: [
-        "Soporte para el Apple TV",
-        "Soporte para el HomePod",
-        "AppleCare+",
-        "App Apple TV",
-        "Apple TV+",
-        "App Casa",
-        "Apple Music",
-        "Siri",
-        "AirPlay",
-      ],
-    },
-  ];
-  const underItems8 = [
-    {
-      spanItems: {
-        span1: "Conoce los servicios de entretenimiento",
-        span2: "Soporte",
-        span3: "",
-      },
-      linkItems1: [
-        "Ver todos los servicios de entretenimiento",
-        "Apple One",
-        "Apple TV+",
-        "Apple Music",
-        "Apple Arcade",
-        "Apple Fitness+",
-        "Apple Podcast",
-        "Apple Books",
-        "App Store",
-      ],
-      linkItems2: ["Soporte para Apple TV", "Soporte para Apple Music"],
-      linkItems3: [""],
-    },
-  ];
-  const underItems9 = [
-    {
-      spanItems: {
-        span1: "Comprar accesorios",
-        span2: "Conoce los Accesorios",
-        span3: "",
-      },
-      linkItems1: [
-        "Ver todos los accesorios",
-        "Mac",
-        "iPad",
-        "iPhone",
-        "Apple Watch",
-        "AirPods",
-        "TV y Casa",
-      ],
-      linkItems2: ["Creados por Apple", "Beats by Dr. Dre", "Air Tag"],
-      linkItems3: [""],
-    },
-  ];
-  const underItems10 = [
-    {
-      spanItems: {
-        span1: "Conoce los servicios de soporte",
-        span2: "Obtén ayuda",
-        span3: "Temas útiles",
-      },
-      linkItems1: ["iPhone", "Mac", "iPad", "Watch", "AirPods", "Música", "TV"],
-      linkItems2: [
-        "Comunidad",
-        "Revisar tu cobertura de servicio",
-        "Reparación",
-        "Contáctanos",
-      ],
-      linkItems3: [
-        "Contratar el AppleCare+",
-        "Apple ID y contraseña",
-        "Facturación y suscripciones",
-        "App encontrar",
-        "Accesibilidad",
-      ],
-    },
-  ];
-
-  const cvwItems = [
-    {
-      tittle: "iPhone 15 Pro",
-      p: "Titanio. Tan resistente y ligero. Tan Pro.",
-      src: "img/cvw/iphone15pro.jpg",
-      className: "white",
-    },
-    {
-      tittle: "iPhone 15",
-      p: "Nueva cámara. Nuevo diseño. Nuevocionante.",
-      src: "img/cvw/hero_iphone15_announce.jpg",
-    },
-  ];
-  const cvwItems2 = [
-    {
-      tittle: "iPad Pro",
-      p: "Increíblemente poderoso. Asombrosamente delgado.",
-      p2: "Available starting 5.15",
-      src: "img/cvw/hero_ipadpro_announce.jpg",
-      className: "white cvw2",
-    },
-  ];
-
-  const csItems = [
-    {
-      p: "Apple Worldwide Developers Conference. Join us online June 10-14",
-      src: "img/cvw/promo_wwdc24_announce.jpg",
-      className: "white down",
-    },
-    {
-      tittle: "iPhone 15 Pro",
-      p: "Titanium. So strong. So light. So Pro.",
-      p2: "",
-      btn2: "Comprar",
-      src: "img/cvw/promo_iphone15pro.jpg",
-      className: "white",
-    },
-    {
-      tittle: "Estudiantes universitarios",
-      p: "La Mac y el iPad te llevan lejos.",
-      src: "img/cvw/promo_college_students.jpg",
-      className: "white down",
-    },
-    {
-      tittle: "MacBook Air",
-      p: "Superligera. Superchip M3.",
-      btn2: "Comprar",
-      src: "img/cvw/promo_macbook_air_m3.jpg",
-    },
-    {
-      tittle: "Card",
-      p: "Get up to 3% Daily Cash Back",
-      p2: "with every purchase.",
-      btn2: "Apply now",
-      src: "img/cvw/tile__cauwwcyyn9hy.jpg",
-      src2: "img/cvw/logo__dcojfwkzna2q_large.png",
-      className: "hidde",
-    },
-    {
-      tittle: "Trade In",
-      p: "Get $170-$630 in credit when you",
-      p2: "trade in iPhone 11 or higher.",
-      btn: "Get your estimate",
-      src: "img/cvw/promo_iphone_tradein.jpg",
-      src2: "img/cvw/logo_tradein__d1fpktgipvki_large.png",
-      className: "hidde",
     },
   ];
 
@@ -582,151 +219,15 @@ function App() {
     },
   ];
 
-  const footerItems = [
-    {
-      tittle: "Descubrir y comprar",
-      items: [
-        "Tienda",
-        "Mac",
-        "iPad",
-        "iPhone",
-        "Watch",
-        "AirPods",
-        "TV y Casa",
-        "AirTag",
-        "Accesorios",
-        "Tarjeta de regalo",
-      ],
-    },
-    {
-      tittle: "Apple Wallet",
-      items: ["Wallet", "Apple Pay"],
-    },
-    {
-      tittle: "Cuenta",
-      items: [
-        "Administrar tu Apple ID",
-        "Cuenta del Apple Store",
-        "iCloud.com",
-      ],
-    },
-    {
-      tittle: "Entretenimiento",
-      items: [
-        "Apple One",
-        "Apple TV+",
-        "Apple Music",
-        "Apple Arcade",
-        "Apple Fitness+",
-        "Apple Podcasts",
-        "Apple Books",
-        "Apple Store",
-      ],
-    },
-    {
-      tittle: "Apple Store",
-      items: [
-        "Buscar una tienda",
-        "Genius Bar",
-        "Today at Apple",
-        "Reservaciónes para grupos",
-        "Campamento de Apple",
-        "App Apple Store",
-        "Apple Trade In",
-        "Financiamiento",
-        "Estado del pedido",
-        "Ayuda para comprar",
-      ],
-    },
-    {
-      tittle: "Para la empresa",
-      items: ["Apple y la empresa", "Comprar para tu empresa"],
-    },
-    {
-      tittle: "Para la educación",
-      items: [
-        "Apple y la educación",
-        "Comprar para la educaión básica",
-        "Comprar para la universidad",
-      ],
-    },
-    {
-      tittle: "Valores de Apple",
-      items: ["Accesibilidad", "Educación", "Medio ambiente", "Privacidad"],
-    },
-    {
-      tittle: "Acerca de Apple",
-      items: [
-        "Newroom",
-        "Directivos de Apple",
-        "Oportunidades laborales",
-        "Inversionistas",
-        "Ética y cumplimiento de políticas",
-        "Eventos",
-        "Contactar a Apple",
-      ],
-    },
-  ];
-
   return (
     <>
-      <NavBar
-        items={navItem}
-        underItems={underItems}
-        underItems2={underItems2}
-        underItems3={underItems3}
-        underItems4={underItems4}
-        underItems5={underItems5}
-        underItems6={underItems6}
-        underItems7={underItems7}
-        underItems8={underItems8}
-        underItems9={underItems9}
-        underItems10={underItems10}
-      ></NavBar>
-      <section className="section--vw">
-        {cvwItems.map((item, i) => (
-          <CardVW
-            key={i}
-            tittle={item.tittle}
-            p={item.p}
-            src={item.src}
-            className={item.className}
-          ></CardVW>
-        ))}
-        {cvwItems2.map((item, i) => (
-          <CardVW2
-            key={i}
-            tittle={item.tittle}
-            p={item.p}
-            p2={item.p2}
-            src={item.src}
-            className={item.className}
-          ></CardVW2>
-        ))}
-      </section>
-      <section className="section--cs">
-        {csItems.map((item, i) => (
-          <CardS
-            key={i}
-            tittle={item.tittle}
-            p={item.p}
-            p2={item.p2}
-            btn={item.btn}
-            btn2={item.btn2}
-            src={item.src}
-            src2={item.src2}
-            className={item.className}
-          ></CardS>
-        ))}
-      </section>
+      <Link to="/">App</Link>
+      <NavBar items={navItem}></NavBar>
       <section className="section--carousel">
         <div className="carousel__wrapper">
           <Carousel itemsData={carouselItems}></Carousel>
         </div>
       </section>
-      <Footer itemData={footerItems}></Footer>
     </>
   );
 }
-
-export default App;
